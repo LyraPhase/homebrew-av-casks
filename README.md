@@ -1,10 +1,10 @@
-# Lyraphase Av-casks
+# Lyraphase Audio/Video Casks
 
 ## How do I install these formulae?
 
-`brew install lyraphase/av-casks/<formula>`
+`brew install lyraphase/av-casks/<cask>`
 
-Or `brew tap lyraphase/av-casks` and then `brew install <formula>`.
+Or `brew tap lyraphase/av-casks` and then `brew install --cask <cask>`.
 
 ## Documentation
 

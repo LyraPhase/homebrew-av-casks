@@ -9,5 +9,6 @@ cask "ndi-tools" do
 
   pkg "NDIToolsInstaller.pkg"
 
-  uninstall pkgutil: "com\.newtek\.(NDI(-Tools|-HX-Driver|\.prefpane|-Transmit-AdobeCC|-Transmit-AdobeCC)|HAL\.NDIaudioplugin|DAL(\.NDIpluginlaunchdaemon|\.NDIplugin)|NewTek-Import-SpeedHQ|Test-Patterns-Mac-|ndi\.recording)"
+  uninstall quit:    "com\.newtek\.(Application-Mac-NDI-AccessManager|NDI-Toolscom\.newtek\.Application-Mac-NDI-ScanConverter|Test-Patterns-Mac-|Application-Mac-NDI-StudioMonitor|Application-Mac-NDI-VirtualInput)",
+            pkgutil: "com\.newtek\.(NDI(-Tools|-HX-Driver|\.prefpane|-Transmit-AdobeCC|-Transmit-AdobeCC)|HAL\.NDIaudioplugin|DAL(\.NDIpluginlaunchdaemon|\.NDIplugin)|NewTek-Import-SpeedHQ|Test-Patterns-Mac-|ndi\.recording)"
 end

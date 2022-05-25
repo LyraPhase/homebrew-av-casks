@@ -78,6 +78,7 @@ and help me continue?
 | GitHub   | [💖 Sponsor](https://github.com/sponsors/trinitronx)                                                                   |
 | Liberapay| [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/trinitronx/donate)  |
 | PayPal   | [![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/JamesCuzella) |
+| Ko-Fi    | [![Donate with Ko-Fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/trinitronx)                        |
 <!-- markdownlint-enable MD013  -->
 
 Every little bit is appreciated! Thank you! 🙏

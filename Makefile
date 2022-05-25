@@ -26,7 +26,7 @@ install: $(TAP_DIR) $(TAP_DIR)/$(REPO_NAME) ## Install Tap via git checkout syml
 test: install ## Run tests
 	brew audit --cask $(CASK_NAME)
 	brew install --cask --verbose $(CASK_NAME)
-	test -e "$(brew --caskroom)/$(CASK_NAME)/latest/NDIToolsInstaller.pkg'
+	test -e "$(brew --caskroom)/$(CASK_NAME)/latest/NDIToolsInstaller.pkg"
 #	pkgutil --pkgs=$(PKG_ID)
 
 clean:: ## Remove temporary/build files.

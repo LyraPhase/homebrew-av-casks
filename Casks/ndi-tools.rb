@@ -9,6 +9,7 @@ cask "ndi-tools" do
 
   pkg "NDIToolsInstaller.pkg"
 
+  # rubocop:disable Layout/LineEndStringConcatenationIndentation
   uninstall quit:    "com\.newtek\.(" \
                            "Application-Mac-NDI-AccessManager|" \
                            "NDI-Toolscom\.newtek\.Application-Mac-NDI-ScanConverter|" \
@@ -31,5 +32,6 @@ cask "ndi-tools" do
                              "NewTek-Import-SpeedHQ|" \
                              "Test-Patterns-Mac-|" \
                              "ndi\.recording" \
-                           ")";
+                           ")"
+  # rubocop:enable Layout/LineEndStringConcatenationIndentation
 end

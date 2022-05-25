@@ -2,9 +2,8 @@
 # where the inspected file is and continue its way up to the root directory.
 #
 # See https://github.com/rubocop-hq/rubocop/blob/master/manual/configuration.md
-inherit_from:
-  - <%= `brew --prefix`.lines.first.chomp -%>/Homebrew/Library/.rubocop.yml
 AllCops:
+  NewCops: enable
   Include:
     - Gemfile
     - Rakefile
@@ -16,12 +15,9 @@ AllCops:
    - vendor/**/*
    - .github/**/*
 
-Layout/LineLength:
+LineLength:
   Max: 120
 
-# Just disable this for our Tap
 Style/DisableCopsWithinSourceCodeDirective:
-  Enabled: false
-## Needs newer version of RuboCop than Homebrew has pinned
-## Reference: https://github.com/rubocop/rubocop/issues/9399
-#  IgnoredCops: ['Metrics/MethodLength', 'Layout/LineEndStringConcatenationIndentation']
+  Enabled: true
+  AllowedCops: ['Metrics/MethodLength', 'Layout/LineEndStringConcatenationIndentation']

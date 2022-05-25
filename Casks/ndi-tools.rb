@@ -8,4 +8,6 @@ cask "ndi-tools" do
   homepage "https://www.ndi.tv/tools/"
 
   pkg "NDIToolsInstaller.pkg"
+
+  uninstall pkgutil: "com\.newtek\.(NDI(-Tools|-HX-Driver|\.prefpane|-Transmit-AdobeCC|-Transmit-AdobeCC)|HAL\.NDIaudioplugin|DAL(\.NDIpluginlaunchdaemon|\.NDIplugin)|NewTek-Import-SpeedHQ|Test-Patterns-Mac-|ndi\.recording)"
 end

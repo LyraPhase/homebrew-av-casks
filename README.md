@@ -12,6 +12,8 @@
       "*",
       "## Usage",
       "*",
+      "### Upgrading",
+      "*",
       "## Sponsor",
       "*",
       "## Migration",
@@ -65,6 +67,35 @@ Once the tap is installed, you can install the Casks!
 To uninstall run:
 
     brew uninstall --cask <cask>
+
+### Upgrading
+
+This Homebrew Tap contains some Casks that can be auto-upgraded, and some that
+require a manual installer step.  For those that need the [`installer manual`
+stanza][1], the usual `brew upgrade --cask` command does not work.  In that
+case, use `brew reinstall --cask` instead.
+
+Below are some helpful commands for upgrading.
+
+To view all outdated Casks on your system, run:
+
+    brew outdated --cask --greedy
+
+To check if a single Cask is outdated, (e.g.: `ndi-tools`):
+
+    brew outdated --cask  --greedy ndi-tools
+
+To upgrade a single Cask (e.g.: `ndi-tools`):
+
+    brew upgrade --cask  --greedy ndi-tools
+
+To upgrade an `installer manual` Cask (e.g.: `soundid-reference`):
+
+    brew reinstall  --cask soundid-reference
+
+To upgrade all outdated Casks on your system, run:
+
+    brew outdated --cask  --quiet --greedy | xargs brew upgrade --cask
 
 ## Sponsor
 
@@ -137,3 +168,4 @@ Copyright (C) © 🄯  2022 James Cuzella
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 [keybase-id]: https://gist.github.com/trinitronx/aee110cbdf55e67185dc44272784e694
+[1]: https://docs.brew.sh/Cask-Cookbook#stanza-installer

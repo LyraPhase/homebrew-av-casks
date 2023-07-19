@@ -129,8 +129,8 @@ Every little bit is appreciated! Thank you! 🙏
 **TODO**:
 
 - Migrate old Cask repos under this Tap:
-  [ ] `trinitronx/homebrew-soundid-reference`
-  [x] `trinitronx/homebrew-bpm`
+  - [ ] `trinitronx/homebrew-soundid-reference`
+  - [x] `trinitronx/homebrew-bpm`
 
 ## Development
 

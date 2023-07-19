@@ -1,31 +1,19 @@
 cask "bpm" do
-  version "1.6,1.5"
-  sha256 :no_check
+  version "1.6,4bbef8bb49039e3b154109265710a2f150b8180b"
+  sha256 "3cba546138c48b4c33d18a3f3bcc6d8b179b1ad676ea0431227cbefdddb9f1d9"
 
-  url "https://github.com/bencmbrook/bpm/releases/download/#{version.csv.second}/bpm.zip",
+  url "https://github.com/bencmbrook/bpm/raw/#{version.csv.second}/bpm.zip",
       verified: "github.com/bencmbrook/bpm/"
   name "bpm"
   desc "Lightweight beats-per-minute tapper for the status bar"
   homepage "https://djtechtools.com/2016/02/29/tap-bpm-tool-for-the-mac-status-bar"
 
-  livecheck do
-    url :url
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
+  # NOTE: Upstream latest release is 1.6
+  # but latest git tag = v1.5
+  # Original site is gone, so this likely is last release anyway...
+  # Can't reliably livecheck due to this
 
-      # NOTE: Upstream releaser made a mistake!
-      # git tag = v1.5, but .zip actually contains v1.6
-      # Original site is gone, so this likely is last release anyway...
-      if match[1] == "1.5"
-        "1.6,1.5"
-      else
-        "#{match[1]},#{match[1]}"
-      end
-    end
-  end
-
-  app "bpm #{version}/bpm.app"
+  app "bpm v#{version.csv.first}/bpm.app"
 
   caveats do
     free_license "https://creativecommons.org/licenses/by/3.0/"

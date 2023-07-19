@@ -32,8 +32,10 @@ jobs:
       - run: brew test-bot --only-setup
 
       # Allow our own tap style overrides
-      - run: sed -i'' -e '/Style\/DisableCopsWithinSourceCodeDirective:/{n;s/.*Enabled: true/  Enabled: false/;}' $(brew --prefix)/Library/.rubocop.yml
-      - run: sed -n -e '/Style\/DisableCopsWithinSourceCodeDirective:/{p;n;p;}' $(brew --prefix)/Library/.rubocop.yml
+      - run: |
+          sed -i'' -e '/Style\/DisableCopsWithinSourceCodeDirective:/{n;s/.*Enabled: true/  Enabled: false/;}' $(brew --prefix)/Library/.rubocop.yml
+      - run: |
+          sed -n -e '/Style\/DisableCopsWithinSourceCodeDirective:/{p;n;p;}' $(brew --prefix)/Library/.rubocop.yml
 
       - run: brew test-bot --only-tap-syntax
 

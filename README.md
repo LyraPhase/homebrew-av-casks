@@ -37,6 +37,8 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/pre-commit.yml)
 
+<span style="color:#c96198" />[![Donate using GitHub Sponsors](./assets/heart-24.svg)](https://github.com/sponsors/trinitronx)</span>
+
 ## How do I install these formulae?
 
 `brew install lyraphase/av-casks/<cask>`

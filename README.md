@@ -93,7 +93,7 @@ Every little bit is appreciated! Thank you! 🙏
 
 ## Development
 
-If you wish to contribute to this Cask, there is a helper `Makefile` with somei
+If you wish to contribute to this Cask, there is a helper `Makefile` with some
 useful targets.
 
 To checkout this repo and install in development mode:
@@ -102,7 +102,7 @@ To checkout this repo and install in development mode:
     cd homebrew-av-casks
     make install
 
-This will install a symbolic link to this git repo under:i
+This will install a symbolic link to this git repo under:
 
     $(brew --repo)/Library/Taps/LyraPhase/homebrew-av-casks
 
@@ -121,7 +121,7 @@ Author:: James Cuzella ([@trinitronx][keybase-id])
 
 # License
 
-Copyright (C) © 🄯  2022 James Cuzella
+Copyright (C) © 🄯  2022-2023 James Cuzella
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

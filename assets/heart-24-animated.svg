@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+'animation-play-state':'running',
+
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes hi  {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes godrays{
+                0%{
+                  height:50px;
+                  width:50px;
+                  top:16px;
+                  left:77px;
+                  transform:rotate(0deg);
+                  -ms-transform:rotate(0deg);
+                }
+                5%{
+                  height:200px;
+                  width:200px;
+                  top:-65px;
+                  left:5px;
+                }
+                100%{
+                  height:200px;
+                  width:200px;
+                  top:-65px;
+                  left:5px;
+                  transform:rotate(360deg);
+                  -ms-transform:rotate(360deg);
+                }
+        }
+        @-webkit-keyframes godrays{
+                0%{
+                  height:50px;
+                  width:50px;
+                  top:16px;
+                  left:80px;
+                  -webkit-transform:rotate(0deg);
+                }
+                5%{
+                  height:200px;
+                  width:200px;
+                  top:-65px;
+                  left:5px;
+                }
+                100%{
+                  height:200px;
+                  width:200px;
+                  top:-65px;
+                  left:5px;
+                  -webkit-transform:rotate(360deg);
+                }
+        }
+        @keyframes retract{
+          from{
+            height:200px;
+            width:200px;
+            top:-65px;
+            left:5px;
+            transform:rotate(0deg);
+            -ms-transform:rotate(0deg);
+          }
+          to{
+            height:50px;
+            width:50px;
+            top:16px;
+            left:77px;
+            transform:rotate(45deg);
+            -ms-transform:rotate(45deg);
+          }
+        }
+        @-webkit-keyframes retract{
+          from{
+            height:200px;
+            width:200px;
+            top:-65px;
+            left:5px;
+            -webkit-transform:rotate(0deg);
+          }
+          to{
+            height:50px;
+            width:50px;
+            top:16px;
+            left:77px;
+            -webkit-transform:rotate(45deg);
+          }
+        }
+
+        .hover-animate {
+              animation-name:'godrays'
+              animation-duration:'10s'
+              animation-iteration-count:'infinite'
+	      -webkit-animation-play-state:'running'
+              -webkit-animation-name:'godrays'
+              -webkit-animation-duration:'10s'
+              -webkit-animation-iteration-count:'infinite'
+        }
+
+        .container {
+          background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+
+          width: 100%;
+          height: 300px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .hi {
+          animation: hi 1.5s linear -0.5s infinite;
+          display: inline-block;
+          transform-origin: 70% 70%;
+        }
+
+        @media (prefers-reduced-motion) {
+          .container {
+            animation: none;
+          }
+
+          .hi {
+            animation: none;
+          }
+
+          .hover-animate {
+            animation: none;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <h1>Hi there <div class="hi">👋</div></h1>
+        <p>Does it animate? <span class="hover-animate"><img src="https://github.com/LyraPhase/homebrew-av-casks/raw/add-github-sponsors-icon/assets/checkerboard-flower-prismatic.svg"/></span></p>
+      </div>
+    </div>
+  </foreignObject>
+<path fill="#c96198" d="m12 20.703.343.667a.748.748 0 0 1-.686 0l-.003-.002-.007-.003-.025-.013a31.138 31.138 0 0 1-5.233-3.576C3.8 15.573 1 12.332 1 8.514v-.001C1 5.053 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262a31.148 31.148 0 0 1-5.233 3.576l-.025.013-.007.003-.002.001ZM6.736 4C4.657 4 2.5 5.88 2.5 8.514c0 3.107 2.324 5.96 4.861 8.12a29.655 29.655 0 0 0 4.566 3.175l.073.041.073-.04c.271-.153.661-.38 1.13-.674.94-.588 2.19-1.441 3.436-2.502 2.537-2.16 4.861-5.013 4.861-8.12C21.5 5.88 19.343 4 17.264 4c-2.106 0-3.801 1.389-4.553 3.643a.751.751 0 0 1-1.422 0C10.537 5.389 8.841 4 6.736 4Z"/></svg>

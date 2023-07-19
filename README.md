@@ -75,8 +75,9 @@ To uninstall run:
 Casks included in this Tap:
 
 - [`bpm`][bpm] - A lightweight beats-per-minute tapper for the Mac status bar.
-- [`ndi-tools`][ndi-tools] -  NDI® Tools a free suite of applications and tools for NDI VoIP streaming
-=======
+- [`ndi-tools`][ndi-tools] -  NDI® Tools a free suite of applications and tools
+  for NDI VoIP streaming.
+
 ### Upgrading
 
 This Homebrew Tap contains some Casks that can be auto-upgraded, and some that

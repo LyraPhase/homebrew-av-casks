@@ -1,0 +1,88 @@
+---
+name: ci
+
+"on":
+  pull_request:
+    branches:
+      - master
+      - main
+      - develop
+  push:
+    branches:
+      - master
+      - main
+      - develop
+env:
+  debug_ci: true
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-11, macos-12]
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Add SSH_AUTH_SOCK to user shell .profile
+        run: |
+          sudo tee -a ~/.profile <<EOPROFILE
+          SSH_AUTH_SOCK=${{ env.SSH_AUTH_SOCK }}
+          EOPROFILE
+      - name: Configure global git SSH URLs
+        run: |
+          git config --global url."git@github.com:".insteadOf "https://github.com/"
+      - name: Configure Homebrew cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/Library/Caches/Homebrew/*--*
+            ~/Library/Caches/Homebrew/downloads/*--*
+            ~/Library/Caches/Homebrew/Cask/*--*
+          key: brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}
+          restore-keys: |
+            brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}
+            brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}
+      - name: Run brew update
+        env:
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+        run: |
+          brew update
+      - name: Clean homebrew cache
+        env:
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+        run: |
+          brew cleanup
+      - name: DEBUG - GitHub Workspace
+        run: |
+          echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE
+        if: env.debug_ci == true
+      - name: DEBUG - Print all shell env exports
+        run: export -p
+        if: env.debug_ci == true
+      - name: DEBUG - List workspace and Homebrew contents
+        run: |
+          ls -lR ${GITHUB_WORKSPACE}
+          ls -lR /usr/local/Homebrew
+        if: env.debug_ci == true
+      - name: Run tap install
+        env:
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+        run: make install
+      - name: Run test & install
+        env:
+          HOMEBREW_COLOR: 1
+          HOMEBREW_DEVELOPER: 1
+        run: |
+          make test
+      - name: Upload install.log on failure
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: Build failure logs
+          path: /var/log/install.log

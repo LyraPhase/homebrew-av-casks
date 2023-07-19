@@ -4,11 +4,12 @@ cask "ndi-tools" do
 
   url "https://downloads.ndi.tv/Tools/NDIToolsInstaller.pkg"
   name "ndi-tools"
-  desc "NDI® Tools a free suite of applications and tools for NDI VoIP streaming"
+  desc "Free suite of applications and tools for NDI VoIP streaming"
   homepage "https://www.ndi.tv/tools/"
 
   pkg "NDIToolsInstaller.pkg"
 
+  # rubocop:disable Layout/LineEndStringConcatenationIndentation, Style/RedundantStringEscape
   uninstall quit:    "com\.newtek\.(" \
                            "Application-Mac-NDI-AccessManager|" \
                            "NDI-Toolscom\.newtek\.Application-Mac-NDI-ScanConverter|" \
@@ -31,5 +32,6 @@ cask "ndi-tools" do
                              "NewTek-Import-SpeedHQ|" \
                              "Test-Patterns-Mac-|" \
                              "ndi\.recording" \
-                           ")";
+                           ")"
+  # rubocop:enable Layout/LineEndStringConcatenationIndentation, Style/RedundantStringEscape
 end

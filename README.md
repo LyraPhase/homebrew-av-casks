@@ -12,6 +12,8 @@
       "*",
       "## Usage",
       "*",
+      "### Casks",
+      "*",
       "## Sponsor",
       "*",
       "## Migration",
@@ -66,6 +68,13 @@ To uninstall run:
 
     brew uninstall --cask <cask>
 
+### Casks
+
+Casks included in this Tap:
+
+- [`bpm`][bpm] - A lightweight beats-per-minute tapper for the Mac status bar.
+- [`ndi-tools`][ndi-tools] -  NDI® Tools a free suite of applications and tools for NDI VoIP streaming
+
 ## Sponsor
 
 If you find this project useful and appreciate my work,
@@ -89,7 +98,7 @@ Every little bit is appreciated! Thank you! 🙏
 
 - Migrate old Cask repos under this Tap:
   [ ] `trinitronx/homebrew-soundid-reference`
-  [ ] `trinitronx/homebrew-bpm`
+  [x] `trinitronx/homebrew-bpm`
 
 ## Development
 
@@ -137,3 +146,5 @@ Copyright (C) © 🄯  2022-2023 James Cuzella
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 [keybase-id]: https://gist.github.com/trinitronx/aee110cbdf55e67185dc44272784e694
+[bpm]: https://github.com/bencmbrook/bpm
+[ndi-tools]: https://www.ndi.tv/tools/

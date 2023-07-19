@@ -156,7 +156,7 @@
 
       <div class="container">
         <h1>Hi there <div class="hi">👋</div></h1>
-        <p>Does it animate? <span class="hover-animate"><img src="https://github.com/LyraPhase/homebrew-av-casks/raw/add-github-sponsors-icon/assets/checkerboard-flower-prismatic.svg"/></span></p>
+        <p>Does it animate? <span class="hover-animate"><img src="https://raw.githubusercontent.com/LyraPhase/homebrew-av-casks/add-github-sponsors-icon/assets/checkerboard-flower-prismatic.svg"/></span></p>
       </div>
     </div>
   </foreignObject>

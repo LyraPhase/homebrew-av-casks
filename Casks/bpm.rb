@@ -3,13 +3,13 @@ cask "bpm" do
   sha256 :no_check
 
   url "https://github.com/bencmbrook/bpm/releases/download/#{version.csv.second}/bpm.zip",
-      verified: "github.com/bencmbrook/bpm"
+      verified: "github.com/bencmbrook/bpm/"
   name "bpm"
-  desc "A lightweight beats-per-minute tapper for the Mac status bar."
+  desc "Lightweight beats-per-minute tapper for the status bar"
   homepage "https://djtechtools.com/2016/02/29/tap-bpm-tool-for-the-mac-status-bar"
 
   livecheck do
-    url :url #"https://github.com/bencmbrook/bpm"
+    url :url
     strategy :github_latest do |json, regex|
       match = json["tag_name"]&.match(regex)
       next if match.blank?

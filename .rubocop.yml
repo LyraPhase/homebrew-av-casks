@@ -3,6 +3,7 @@
 #
 # See https://github.com/rubocop-hq/rubocop/blob/master/manual/configuration.md
 AllCops:
+  NewCops: enable
   Include:
     - Gemfile
     - Rakefile
@@ -19,4 +20,4 @@ LineLength:
 
 Style/DisableCopsWithinSourceCodeDirective:
   Enabled: true
-  IgnoredCops: ['Metrics/MethodLength', 'Layout/LineEndStringConcatenationIndentation']
+  AllowedCops: ['Metrics/MethodLength', 'Layout/LineEndStringConcatenationIndentation']

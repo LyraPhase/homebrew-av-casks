@@ -25,7 +25,7 @@ jobs:
 # See: https://github.com/Homebrew/actions/blob/master/setup-homebrew/main.sh#L207-L242
 #      - name: Check out code
 #        uses: actions/checkout@v4
-      - uses: webfactory/ssh-agent@v0.5.4
+      - uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add SSH_AUTH_SOCK to user shell .profile

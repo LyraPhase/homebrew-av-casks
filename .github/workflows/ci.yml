@@ -71,6 +71,7 @@ jobs:
           path: |
             ~/Library/Caches/Homebrew/Cask/bpm--*
             ~/Library/Caches/Homebrew/Cask/ndi-tools--*
+            ~/Library/Caches/Homebrew/downloads/*--NDIToolsInstaller.pkg*
           key: brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}-${{ github.sha }}
           restore-keys: |
             brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}-${{ github.sha }}

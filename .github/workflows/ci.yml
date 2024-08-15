@@ -21,8 +21,10 @@ jobs:
       matrix:
         os: [macos-11, macos-12]
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+# Now handled by Homebrew/actions/setup-homebrew
+# See: https://github.com/Homebrew/actions/blob/master/setup-homebrew/main.sh#L207-L242
+#      - name: Check out code
+#        uses: actions/checkout@v4
       - uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}

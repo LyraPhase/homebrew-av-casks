@@ -20,6 +20,7 @@ $(TAP_DIR)/$(REPO_NAME):
 	ln -s $(PWD) $(TAP_DIR)/$(REPO_NAME)
 
 install: $(TAP_DIR) $(TAP_DIR)/$(REPO_NAME) ## Install Tap via git checkout symlink (development mode)
+	env
 	brew tap --repair
 	brew tap
 

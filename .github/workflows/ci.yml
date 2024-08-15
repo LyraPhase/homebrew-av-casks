@@ -59,14 +59,14 @@ jobs:
           brew cleanup
       - name: DEBUG - GitHub Workspace
         run: |
-          echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE
+          echo GITHUB_WORKSPACE="$GITHUB_WORKSPACE"
         if: env.debug_ci == true
       - name: DEBUG - Print all shell env exports
         run: export -p
         if: env.debug_ci == true
       - name: DEBUG - List workspace and Homebrew contents
         run: |
-          ls -lR ${GITHUB_WORKSPACE}
+          ls -lR "${GITHUB_WORKSPACE}"
           ls -lR /usr/local/Homebrew
         if: env.debug_ci == true
       - name: Run tap install

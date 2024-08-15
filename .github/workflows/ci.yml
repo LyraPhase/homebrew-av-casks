@@ -73,6 +73,7 @@ jobs:
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_SORBET_RUNTIME: false
         run: make install
       - name: Run test & install
         env:

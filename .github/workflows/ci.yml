@@ -41,6 +41,12 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
+      - name: Check out Pull Request
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
       - name: DEBUG Tap Repo
         run: |
           echo HOMEBREW_TAP_REPOSITORY=${{ steps.set-up-homebrew.outputs.repository-path }}

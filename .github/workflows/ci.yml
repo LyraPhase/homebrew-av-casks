@@ -79,9 +79,9 @@ jobs:
             ~/Library/Caches/Homebrew/Cask/ndi-tools--*
             ~/Library/Caches/Homebrew/downloads/*--bpm.zip*
             ~/Library/Caches/Homebrew/downloads/*--NDIToolsInstaller.pkg*
-          key: brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}-${{ github.sha }}
+          key: brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}-${{ hashFiles('Casks/**.rb') }}
           restore-keys: |
-            brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}-${{ github.sha }}
+            brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}-${{ hashFiles('Casks/**.rb') }}
             brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}-${{ hashFiles( env.BREWFILE_PATH, '**/Brewfile.lock.json') }}
             brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('.github/clear_github_actions_cache') }}
 

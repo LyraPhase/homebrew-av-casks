@@ -22,7 +22,7 @@ jobs:
         os: [macos-11, macos-12]
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global url."git@github.com:".insteadOf "https://github.com/"
       - name: Configure Homebrew cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             ~/Library/Caches/Homebrew/*--*
@@ -59,20 +59,21 @@ jobs:
           brew cleanup
       - name: DEBUG - GitHub Workspace
         run: |
-          echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE
+          echo GITHUB_WORKSPACE="$GITHUB_WORKSPACE"
         if: env.debug_ci == true
       - name: DEBUG - Print all shell env exports
         run: export -p
         if: env.debug_ci == true
       - name: DEBUG - List workspace and Homebrew contents
         run: |
-          ls -lR ${GITHUB_WORKSPACE}
+          ls -lR "${GITHUB_WORKSPACE}"
           ls -lR /usr/local/Homebrew
         if: env.debug_ci == true
       - name: Run tap install
         env:
           HOMEBREW_COLOR: 1
           HOMEBREW_DEVELOPER: 1
+          HOMEBREW_NO_SORBET_RUNTIME: 1
         run: make install
       - name: Run test & install
         env:

@@ -17,7 +17,7 @@ jobs:
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -33,7 +33,7 @@ jobs:
 
       # Allow our own tap style overrides
       - run: |
-          sed -i'' -e '/Style\/DisableCopsWithinSourceCodeDirective:/{n;s/.*Enabled: true/  Enabled: false/;}' $(brew --repository)/Library/.rubocop.yml
+          sed -i'' -e '/Style\/DisableCopsWithinSourceCodeDirective:/{n;s/.*Enabled: true/  Enabled: false/;}' "$(brew --repository)"/Library/.rubocop.yml
 
       - run: brew test-bot --only-tap-syntax
 

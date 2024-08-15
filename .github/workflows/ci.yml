@@ -36,9 +36,18 @@ jobs:
       - name: Configure global git SSH URLs
         run: |
           git config --global url."git@github.com:".insteadOf "https://github.com/"
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
+
+      - name: DEBUG Tap Repo
+        run: |
+          echo HOMEBREW_TAP_REPOSITORY=${{ steps.set-up-homebrew.outputs.repository-path }}
+          ls -l ${{ steps.set-up-homebrew.outputs.repository-path }}
+          cd ${{ steps.set-up-homebrew.outputs.repository-path }} && git status && git log --graph --decorate --oneline --all --abbrev-commit
+        if: env.debug_ci == true
+
       - name: Cache Homebrew Bundler RubyGems
         id: cache
         uses: actions/cache@v3

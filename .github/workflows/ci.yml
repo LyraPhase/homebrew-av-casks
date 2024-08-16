@@ -19,7 +19,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-12, macos-13, macos-14]
+        os: [macos-12, macos-13, macos-14, macos-14-xlarge]
+      max-parallel: 3
     steps:
 # Now handled by Homebrew/actions/setup-homebrew
 # See: https://github.com/Homebrew/actions/blob/master/setup-homebrew/main.sh#L207-L242

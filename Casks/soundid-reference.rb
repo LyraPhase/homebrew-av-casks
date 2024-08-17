@@ -29,7 +29,7 @@ cask "soundid-reference" do
   # url "https://www.sonarworks.com/soundid-reference/download"
   url "https://updates.sonarworks.com/InstallerDownload.ashx?bootstrap=SoundIDReference&platform=Mac64"
   name "SoundID Reference"
-  desc "SoundID Reference (the next-generation version of Reference 4) software calibrates your speakers and studio headphones."
+  desc "Next-gen version of SoundID Reference calibrates speakers and studio headphones."
   homepage "https://www.sonarworks.com/soundid-reference"
 
   installer manual: "SoundID Reference.app"

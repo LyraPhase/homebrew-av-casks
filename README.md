@@ -77,7 +77,8 @@ Casks included in this Tap:
 - [`bpm`][bpm] - A lightweight beats-per-minute tapper for the Mac status bar.
 - [`ndi-tools`][ndi-tools] -  NDI® Tools a free suite of applications and tools
   for NDI VoIP streaming.
-- [`soundid-reference`][soundid-reference] - Calibration software for headphones and speakers.
+- [`soundid-reference`][soundid-reference] - Calibration software for headphones
+  and speakers.
 
 ### Upgrading
 

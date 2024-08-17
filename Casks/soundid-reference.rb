@@ -34,6 +34,8 @@ cask "soundid-reference" do
 
   installer manual: "SoundID Reference.app"
 
-  uninstall quit:    "com.sonarworks.soundid.reference.measure|com.sonarworks.soundid.reference.systemwide|com.sonarworks.soundid.reference.installer.boot",
+  uninstall quit: "com.sonarworks.soundid.reference.measure|" \
+    "com.sonarworks.soundid.reference.systemwide|" \
+    "com.sonarworks.soundid.reference.installer.boot",
             pkgutil: "com.sonarworks.soundid.*"
 end

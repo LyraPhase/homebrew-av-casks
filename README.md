@@ -33,9 +33,9 @@
 
 # Lyraphase Audio/Video Casks
 
-[![ci](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/ci.yml/badge.svg)](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/ci.yml)
+[![ci](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/ci.yml/badge.svg)](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/ci.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![pre-commit](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/LyraPhase/homebrew-soundid-reference/actions/workflows/pre-commit.yml)
+[![pre-commit](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/pre-commit.yml)
 
 ## How do I install these formulae?
 

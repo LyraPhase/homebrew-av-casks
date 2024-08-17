@@ -3,7 +3,7 @@
 # Recipe:: default
 # Authors:: James Cuzella
 #
-# Copyright:: © 🄯 2022,  James Cuzella
+# Copyright:: © 🄯 2022-2024,  James Cuzella
 # License:: GPLv3.0
 #
 # This program is free software: you can redistribute it and/or modify

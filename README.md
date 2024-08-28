@@ -42,6 +42,8 @@
 <span style="color:#c96198" />[![Donate using GitHub Sponsors](./assets/heart-24.svg)](https://github.com/sponsors/trinitronx)</span>
 
 
+<span style="color:#c96198" />[![Donate using GitHub Sponsors](./assets/heart-24.svg)](https://github.com/sponsors/trinitronx)</span>
+
 ## How do I install these formulae?
 
 `brew install lyraphase/av-casks/<cask>`

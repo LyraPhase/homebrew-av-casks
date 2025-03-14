@@ -19,7 +19,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-12, macos-13, macos-14]
+        os: [macos-13, macos-14, macos-15]
     steps:
 # Now handled by Homebrew/actions/setup-homebrew
 # See: https://github.com/Homebrew/actions/blob/master/setup-homebrew/main.sh#L207-L242
@@ -138,7 +138,7 @@ jobs:
           make test
       - name: Upload install.log on failure
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Build failure logs
           path: /var/log/install.log

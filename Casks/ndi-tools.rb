@@ -30,6 +30,7 @@ cask "ndi-tools" do
 
   pkg "NDIToolsInstaller.pkg"
 
+  # Disable RuboCop annoyances - This RegEx becomes unreadable otherwise
   # rubocop:disable Layout/LineEndStringConcatenationIndentation, Style/RedundantStringEscape
   uninstall quit:    "com\.newtek\.(" \
                            "Application-Mac-NDI-AccessManager|" \

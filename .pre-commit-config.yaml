@@ -1,7 +1,8 @@
 exclude: |
     (?x)^(
         Brewfile\.lock\.json|
-        tmp/.*
+        tmp/.*|
+        .vscode/.*
     )$
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks.git

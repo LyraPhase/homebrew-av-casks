@@ -21,6 +21,12 @@ jobs:
       matrix:
         os: [macos-14, macos-15]
     steps:
+      - name: Get macOS runner version
+        id: macos_runner
+        run: echo "version=${{ matrix.os }}" | sed -e 's/macos-//g' >> "$GITHUB_OUTPUT"
+      - name: Set casks to skip env var for macos >= 15 (Sequoia)
+        if: ${{ fromJSON(steps.macos_runner.outputs.version) >= 15 }}
+        run: echo "SKIP_CASKS=ocenaudio_legacy" >> "$GITHUB_ENV"
 # Now handled by Homebrew/actions/setup-homebrew
 # See: https://github.com/Homebrew/actions/blob/master/setup-homebrew/main.sh#L207-L242
 #      - name: Check out code
@@ -106,6 +112,10 @@ jobs:
           HOMEBREW_DEVELOPER: 1
         run: |
           brew update-reset
+      - name: Fix Tap repo checked out merge commit ref (post brew update-reset)
+        run: |
+          cd '${{ steps.set-up-homebrew.outputs.repository-path }}' && git checkout "refs/remotes/pull/${GITHUB_REF_NAME}"
+        if: github.ref != 'refs/heads/main' && github.event_name == 'pull_request'
       - name: Clean homebrew cache
         env:
           HOMEBREW_COLOR: 1
@@ -122,7 +132,8 @@ jobs:
       - name: DEBUG - List workspace and Homebrew contents
         run: |
           ls -lR "${GITHUB_WORKSPACE}"
-          ls -lR /usr/local/Homebrew
+          [ -e /usr/local/Homebrew ] && ls -lR /usr/local/Homebrew || true
+          [ -e /opt/homebrew ] && ls -lR /opt/homebrew || true
         if: ${{ env.debug_ci == 'true' }}
       - name: Run tap install
         env:

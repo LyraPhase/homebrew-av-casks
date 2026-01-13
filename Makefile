@@ -2,6 +2,7 @@ GITHUB_USER := lyraphase
 REPO_NAME := homebrew-av-casks
 REPO := $(GITHUB_USER)/$(REPO_NAME)
 CASK_NAMES := $(patsubst %.rb,%,$(patsubst Casks/%,%,$(wildcard Casks/*.rb)))
+CASK_NAMES := $(filter-out $(SKIP_CASKS),$(CASK_NAMES))
 PKG_ID := com.newtek.NDI-Tools
 HOMEBREW_LIBRARY_TAPS := $(shell brew --repo)/Library/Taps
 TAP_DIR := $(HOMEBREW_LIBRARY_TAPS)/$(GITHUB_USER)

@@ -21,6 +21,12 @@ jobs:
       matrix:
         os: [macos-14, macos-15]
     steps:
+      - name: Get macOS runner version
+        id: macos_runner
+        run: echo "version=${{ matrix.os }}" | sed -e 's/macos-//g' >> "$GITHUB_OUTPUT"
+      - name: Set casks to skip env var for macos >= 15 (Sequoia)
+        if: ${{ fromJSON(steps.macos_runner.outputs.version) >= 15 }}
+        run: echo "SKIP_CASKS=ocenaudio_legacy" >> "$GITHUB_ENV"
 # Now handled by Homebrew/actions/setup-homebrew
 # See: https://github.com/Homebrew/actions/blob/master/setup-homebrew/main.sh#L207-L242
 #      - name: Check out code

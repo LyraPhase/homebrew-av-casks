@@ -1,0 +1,25 @@
+cask "ocenaudio_legacy" do
+  version "3.17.0"
+  sha256 :no_check
+
+  url "https://www.ocenaudio.com/downloads/ocenaudio_universal_legacy.dmg"
+  name "ocenaudio"
+  desc "Audio editor"
+  homepage "https://www.ocenaudio.com/en"
+
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  depends_on macos: "<= :sonoma"
+
+  app "ocenaudio.app"
+
+  zap trash: [
+    "~/Library/Application Support/ocenaudio",
+    "~/Library/Caches/ocenaudio",
+    "~/Library/Preferences/com.ocenaudio.plist",
+    "~/Library/Saved Application State/com.ocenaudio.savedState",
+  ]
+end

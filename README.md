@@ -36,6 +36,14 @@
 [![ci](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/ci.yml/badge.svg)](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/ci.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pre-commit](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/LyraPhase/homebrew-av-casks/actions/workflows/pre-commit.yml)
+[![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/trinitronx/donate)
+
+<!-- markdownlint-disable MD012 MD033  -->
+<kbd>[<img alt="Donate using GitHub Sponsors" src="./assets/heart-24.svg"](https://github.com/sponsors/trinitronx)></kbd>
+<span style="color:#c96198" />[![Donate using GitHub Sponsors](./assets/heart-24.svg)](https://github.com/sponsors/trinitronx)</span>
+
+<span style="color:#c96198" />[![Donate using GitHub Sponsors](./assets/heart-24.svg)](https://github.com/sponsors/trinitronx)</span>
+<!-- markdownlint-enable MD012 MD033  -->
 
 ## How do I install these formulae?
 
@@ -115,14 +123,17 @@ If you find this project useful and appreciate my work,
 would you be willing to click one of the buttons below to Sponsor this project
 and help me continue?
 
-<!-- markdownlint-disable MD013  -->
-| Method   | Button                                                                                                                 |
-| :------- | :--------------------------------------------------------------------------------------------------------------------: |
-| GitHub   | [💖 Sponsor](https://github.com/sponsors/trinitronx)                                                                   |
-| Liberapay| [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/trinitronx/donate)  |
-| PayPal   | [![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/JamesCuzella) |
-| Ko-Fi    | [![Donate with Ko-Fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/trinitronx)                        |
-<!-- markdownlint-enable MD013  -->
+<!-- markdownlint-disable MD013 MD033  -->
+| Method       | Button                                                                                                                               |
+| :----------- | :----------------------------------------------------------------------------------------------------------------------------------: |
+| GitHub       | [💖 Sponsor](https://github.com/sponsors/trinitronx)                                                                                 |
+| Liberapay    | [![Support with Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/trinitronx/donate)                |
+| PayPal       | [![Support with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/JamesCuzella)              |
+| Ko-Fi        | [![Support with Ko-Fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/trinitronx)                                     |
+| BuyMeACoffee | [<img alt="Buy Me A Coffee" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="51px" width="180px" />](https://www.buymeacoffee.com/TrinitronX) |
+| Polar        | [![Support with Polar](https://polar.sh/embed/seeks-funding-shield.svg?org=lyraphase)](https://polar.sh/lyraphase)                   |
+| Patreon <sup>(_my artist page_)</sup> | [![Support with Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dphasik%26type%3Dpatrons&style=for-the-badge)](https://www.patreon.com/bePatron?u=16585899)                                     |
+<!-- markdownlint-enable MD013 MD033  -->
 
 Every little bit is appreciated! Thank you! 🙏
 
